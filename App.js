@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
 import logo from "./assets/logo.png";
+import Button from "./components/Button";
 
 export default function App() {
   return (
@@ -11,6 +12,11 @@ export default function App() {
       </View>
       <View style={styles.imgContainer}>
         <Image source={logo} style={styles.logo} />
+      </View>
+      <View>
+        <Button> 
+          Haral
+        </Button>
       </View>
     </View>
   );
