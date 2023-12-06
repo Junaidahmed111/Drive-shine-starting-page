@@ -1,46 +1,33 @@
-import {
-  Pressable,
-  StyleSheet,
-  View,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import React from "react";
+import { TouchableOpacity, StyleSheet, Text, View } from "react-native";
 
-function Button({ onPress, text }) {
+function CustomButton({ onPress, text }) {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity
-        onPress={onPress}
-        style={({ pressed }) => [styles.button, pressed && styles.pressed]}
-      >
-        <Text style={styles.textContainer}> {text}</Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity onPress={onPress} style={styles.button}>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>{text}</Text>
+      </View>
+    </TouchableOpacity>
   );
 }
 
-export default Button;
+export default CustomButton;
+
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: "center",
-    alignItems: "center",
-    padding:20,
-    // marginTop:10,
-    // margin:20,
-  },
-  pressed: {
-    opacity: 0.5,
-  },
   button: {
-    padding: 15,
     borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
-    margin: 5,
-
+    width: "45%", 
+    backgroundColor: "black",
+    paddingVertical: 15, 
   },
   textContainer: {
     color: "white",
+    fontSize: 16,
+  },
+  text: {
+    color: "red",
     fontSize: 16,
   },
 });
