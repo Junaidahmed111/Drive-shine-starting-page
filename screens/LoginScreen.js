@@ -6,6 +6,10 @@ import {
   TouchableOpacity,
 } from "react-native";
 import CustomButton from "../components/Button";
+import SocialButton from "../components/SocialButton";
+import google from "../assets/google.png";
+import facebook from "../assets/facebook.jpg";
+import x from "../assets/x.png";
 
 function LoginScreen() {
   return (
@@ -31,6 +35,29 @@ function LoginScreen() {
         <Text style={styles.orText}>OR</Text>
         <View style={styles.orLine} />
       </View>
+      <View style={styles.SocialButton}>
+        <SocialButton
+          logo={google}
+          text="Continue with Google"
+          onPress={() => console.log("social button pressed")}
+        />
+        <SocialButton
+          logo={facebook}
+          text="Continue with Google"
+          onPress={() => console.log("social button pressed")}
+        />
+        <SocialButton
+          logo={x}
+          text="Continue with Google"
+          onPress={() => console.log("social button pressed")}
+        />
+      </View>
+      <View style={styles.lastText}>
+        <Text>Dont have an account?</Text>
+        <TouchableOpacity>
+          <Text style={styles.signUp}>Sign up</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -42,6 +69,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 20,
+    marginTop: 50,
   },
   heading: {
     // backgroundColor: "#c8d750",
@@ -70,7 +98,7 @@ const styles = StyleSheet.create({
   orConatiner: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 15,
+    marginTop: 35,
   },
   orLine: {
     flex: 1,
@@ -79,5 +107,18 @@ const styles = StyleSheet.create({
   },
   orText: {
     marginHorizontal: 10,
+  },
+  SocialButton: {
+    marginTop: 30,
+  },
+  lastText: {
+    flexDirection: "row",
+    marginTop: 40,
+    alignSelf: "flex-end",
+    marginRight: 30,
+  },
+  signUp: {
+    color: "blue",
+    paddingLeft: 5,
   },
 });
