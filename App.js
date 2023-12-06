@@ -10,19 +10,12 @@ export default function App() {
   return (
     <NavigationContainer>
       <stack.Navigator>
-        <View style={styles.container}>
-          <MainScreen />
-        </View>
+        <stack.Screen name="mainScreen" component={MainScreen} />
         <stack.Screen name="loginScreen" component={LoginScreen} />
+        <stack.Screen name="signupScreen" component={LoginScreen} />
       </stack.Navigator>
     </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#d37a7a",
-    flex: 1,
-    justifyContent: "center",
-  },
-});
+const styles = StyleSheet.create({});
