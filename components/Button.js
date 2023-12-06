@@ -18,9 +18,10 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
-    width: "45%", 
+    width: "45%",
     backgroundColor: "black",
-    paddingVertical: 15, 
+    paddingVertical: 15,
+    marginTop: 15,
   },
   textContainer: {
     color: "white",
