@@ -16,9 +16,9 @@ function MainScreen(){
         <CustomButton onPress={() => console.log("Login button pressed")} text="Login" />
         <CustomButton onPress={() => console.log("Signup button pressed")} text="Signup" />
       </View>
-      <View style={styles.guestButtonContainer}>
+      {/* <View style={styles.guestButtonContainer}>
         <CustomButton onPress={() => console.log("Guest Button pressed")} text="Guest" />
-      </View>
+      </View> */}
 </View>
     );
 }
