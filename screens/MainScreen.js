@@ -18,7 +18,7 @@ function MainScreen({ navigation }) {
           text="Login"
         />
         <CustomButton
-          onPress={() => console.log("Signup button pressed")}
+          onPress={() => navigation.navigate("signupScreen")}
           text="Signup"
         />
       </View>
@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   textContainer: {
-    paddingTop: 100,
     paddingLeft: 30,
   },
   text: {
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
   },
   imgContainer: {
-    paddingTop: 70,
+    paddingTop: 50,
     justifyContent: "center",
     alignItems: "center",
     paddingBottom: 50,

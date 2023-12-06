@@ -1,9 +1,9 @@
 import { View, Text } from "react-native";
-function signupScreen() {
+function SignupScreen() {
   return (
     <View>
       <Text>SignUp Screen Screen</Text>
     </View>
   );
 }
-export default signupScreen;
+export default SignupScreen;
